@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Book Appointment</title></head>
+<body>
+    <h1>Appointment Booking</h1>
+    <form action="/appointment" method="post">
+        Name: <input type="text" name="name"><br>
+        Age: <input type="text" name="age"><br>
+        Doctor: <select name="doctor">
+            {% for doctor in doctors %}
+            <option value="{{ doctor.name }}">{{ doctor.name }}</option>
+            {% endfor %}
+        </select><br>
+        <input type="submit" value="Book">
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>
